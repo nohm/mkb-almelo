@@ -26,7 +26,7 @@ var REQUESTURL = PROXYURL + '?url=' + RSSURL;
 
           first = false;
         } else {
-          rssContainer.append('<div class="col-lg-3"><h2><a href="' + link + '">' + title + '</a></h2><p>' + description + '</p></div>');
+          rssHolder.append('<div class="col-lg-3"><h2><a href="' + link + '">' + title + '</a></h2><p>' + description + '</p></div>');
         }
       });
     };
