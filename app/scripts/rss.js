@@ -21,12 +21,28 @@ var REQUESTURL = PROXYURL + '?url=' + RSSURL;
 
         if (first) {
           var headRow = $('<div></div>').addClass('row');
-          headRow.append('<div class="col-lg-6 col-lg-offset-3"><h2><a href="' + link + '">' + title + '</a></h2><p>' + description + '</p></div>');
+          headRow.append(
+            '<div class="col-lg-6 col-lg-offset-3">' +
+              '<h2>' +
+                '<a href="' + link + '">' + title + '</a>' +
+              '</h2>' +
+              '<i class="fa fa-twitter tweet" onclick="tweet(\'' + link + '\',\'' + TWITTER_MKB + '\',\'' + title + '\')"></i>' +
+              '<p>' + description + '</p>' +
+            '</div>'
+          );
           rssContainer.prepend(headRow);
 
           first = false;
         } else {
-          rssHolder.append('<div class="col-lg-3"><h2><a href="' + link + '">' + title + '</a></h2><p>' + description + '</p></div>');
+          rssHolder.append(
+            '<div class="col-lg-3">' +
+              '<h2>' +
+                '<a href="' + link + '">' + title + '</a>' +
+              '</h2>' +
+              '<i class="fa fa-twitter tweet" onclick="tweet(\'' + link + '\',\'' + TWITTER_MKB + '\',\'' + title + '\')"></i>' +
+              '<p>' + description + '</p>' +
+            '</div>'
+          );
         }
       });
     };

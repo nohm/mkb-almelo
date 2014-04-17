@@ -1,0 +1,20 @@
+{
+  "name": "gulp-lean-asset-pipeline",
+  "version": "0.0.1",
+  "dependencies": {},
+  "devDependencies": {
+    "gulp": "~3.5.0",
+    "gulp-clean": "~0.2.4",
+    "gulp-coffee": "~1.4",
+    "gulp-concat": "~2.2.0",
+    "gulp-imagemin": "~0.1.4",
+    "gulp-jshint": "^1.5.3",
+    "gulp-sass": "~0.7.1",
+    "gulp-uglify": "~0.2.1",
+    "jpegtran-bin": "^0.2.6",
+    "optipng-bin": "^0.3.3"
+  },
+  "engines": {
+    "node": ">=0.10.0"
+  }
+}
