@@ -12,8 +12,7 @@ html(lang='en')
           h2 Nieuwsbrieven
           table.table.table-striped.table-hover
             tbody
-              - var newsletters = {'MKB Nieuwsbrief - Jaargang 2 - Uitgave 11':'#', 'MKB Nieuwsbrief - Jaargang 2 - Uitgave 10':'#', 'MKB Nieuwsbrief - Jaargang 2 - Uitgave 9':'#', 'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 6':'#', 'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 5':'#', 'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 4':'#'}
-              each val, key in newsletters
+              each val, key in locals.newsletters
                 tr
                   td= key
                   td

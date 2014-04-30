@@ -7,7 +7,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin');
-    jade = require('gulp-jade');
+    jade = require('gulp-jade'),
+    jadeconfig = require('./jade_config.js');
 
 var paths = {
   html: ['app/html/**/*.jade'],
@@ -20,10 +21,9 @@ var paths = {
 };
 
 gulp.task('jade', function () {
-  var custom_locals = {};
   // Compile jade to html
   return gulp.src(paths.html)
-    .pipe(jade({locals: custom_locals}))
+    .pipe(jade({locals: jadeconfig()}))
     .pipe(gulp.dest('./dist/'))
 });
 
@@ -81,3 +81,4 @@ gulp.task('build', ['jade', 'coffee', 'jshint', 'styles', 'images']);
 gulp.task('default', ['clean'], function() {
   gulp.start('build');
 });
+
