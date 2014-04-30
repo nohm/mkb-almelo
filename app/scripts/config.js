@@ -1,4 +1,4 @@
-var PROXYURL = '../php/proxy.php'
+var PROXYURL = 'php/proxy.php'
 
 var RSSURL = 'http://www.mkb.nl/data/blog/7/rssfeed.xml';
 
