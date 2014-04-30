@@ -5,9 +5,12 @@ var gulp = require('gulp'),
     uglify = require('gulp-uglify'),
     clean = require('gulp-clean'),
     sass = require('gulp-sass'),
+    minifyCSS = require('gulp-minify-css'),
     imagemin = require('gulp-imagemin');
+    jade = require('gulp-jade');
 
 var paths = {
+  html: ['app/html/**/*.jade'],
   scripts: {
     coffee: ['app/scripts/**/*.coffee'],
     js: ['app/scripts/**/*.js']
@@ -15,6 +18,14 @@ var paths = {
   styles:  ['app/styles/**/*.scss', 'app/styles/**/*.css'],
   images:  ['app/images/**/*']
 };
+
+gulp.task('jade', function () {
+  var custom_locals = {};
+  // Compile jade to html
+  return gulp.src(paths.html)
+    .pipe(jade({locals: custom_locals}))
+    .pipe(gulp.dest('./dist/'))
+});
 
 gulp.task('coffee', function() {
   // Compile Coffescript, minify and uglify JS
@@ -35,9 +46,11 @@ gulp.task('jshint', function() {
 });
 
 gulp.task('styles', function () {
+  // Compile Sass and minify it
   return gulp.src(paths.styles)
     .pipe(sass({style: 'compressed'}))
-    .pipe(concat('main.css'))
+    .pipe(minifyCSS())
+    .pipe(concat('main.min.css'))
     .pipe(gulp.dest('dist/styles'));
 });
 
@@ -50,18 +63,19 @@ gulp.task('images', function() {
 
 // Clean up the dist folder
 gulp.task('clean', function () {
-  return gulp.src(['dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe(clean());
+  return gulp.src(['dist', 'dist/styles', 'dist/scripts', 'dist/images'], { read: false }).pipe(clean());
 });
 
 // Rerun the task when a file changes
 gulp.task('watch', function() {
+  gulp.watch(paths.html, ['jade']);
   gulp.watch(paths.scripts.coffee, ['coffee']);
   gulp.watch(paths.scripts.js, ['jshint']);
   gulp.watch(paths.styles, ['styles']);
   gulp.watch(paths.images, ['images']);
 });
 
-gulp.task('build', ['coffee', 'jshint', 'styles', 'images']);
+gulp.task('build', ['jade', 'coffee', 'jshint', 'styles', 'images']);
 
 // The default task (called when you run `gulp` from cli)
 gulp.task('default', ['clean'], function() {

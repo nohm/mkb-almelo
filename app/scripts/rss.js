@@ -1,8 +1,3 @@
-var PROXYURL = 'php/proxy.php'
-var RSSURL = 'http://www.mkb.nl/data/blog/7/rssfeed.xml';
-var REQUESTURL = PROXYURL + '?url=' + RSSURL;
-
-;(function($) {
     var retrieveRSS = function() {
       $.get(REQUESTURL, function(data) {
         parseRSS(data);
@@ -46,10 +41,3 @@ var REQUESTURL = PROXYURL + '?url=' + RSSURL;
         }
       });
     };
-
-    var init = function() {
-        retrieveRSS();
-    };
-
-    $(init);
-})(jQuery);

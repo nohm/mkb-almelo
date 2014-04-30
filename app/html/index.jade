@@ -1,0 +1,103 @@
+doctype html
+html(lang='en')
+  head
+    include partials/head.jade
+  body
+
+    include partials/nav.jade
+
+    //- Carousel
+    div#myCarousel.carousel.slide(data-ride='carousel')
+      ol.carousel-indicators
+        li.active(data-target='#myCarousel', data-slide-to='0')
+        li(data-target='#myCarousel', data-slide-to='1')
+        li(data-target='#myCarousel', data-slide-to='2')
+        li(data-target='#myCarousel', data-slide-to='3')
+        li(data-target='#myCarousel', data-slide-to='4')
+
+      div.carousel-inner
+        div.item
+          img(src='holder.js/900x500/auto/lava', alt='First Slide')
+          div.container
+            div.carousel-caption
+              h1 Week van de Ondernemer 2014
+              p Het grootste ondernemersevent van Nederland staat dit jaar in het teken van Groei. Tientallen topsprekers helpen u!
+              p
+                a.btn.btn-lg.btn-primary(href='http://www.weekvandeondernemer.nl/', role='button') Meer informatie
+
+        div.item
+          img(src='holder.js/900x500/auto/sky', alt='Second Slide')
+          div.container
+            div.carousel-caption
+              h1 Europese verkiezingen
+              p Kijk en vergelijk. Waar kiezen we (nu echt) voor bij de Europese verkiezingen van 22 mei
+              p
+                a.btn.btn-lg.btn-primary(href='http://www.mkb.nl/eu-verkiezingen', role='button') Verkiezingsnieuws
+
+        div.item
+          img(src='holder.js/900x500/auto/industrial', alt='Third Slide')
+          div.container
+            div.carousel-caption
+              h1 Hulpknop Stop Cybercrime
+              p Met één druk op de knop hulp, advies en doorverwijzing voor ondernemers die slachtoffer zijn van cybercrime.
+              p
+                a.btn.btn-lg.btn-primary(href='http://hulpknop.stopcybercrime.nu/', role='button') Extra hulp
+
+        div.item
+          img(src='holder.js/900x500/auto/vine', alt='Fourth Slide')
+          div.container
+            div.carousel-caption
+              h1 MijnMKB
+              p MKB-Nederland helpt jou om je doelen te bereiken. Maak daarom een persoonlijk profiel aan op www.mijnmkb.nl
+              p
+                a.btn.btn-lg.btn-primary(href='http://www.mijnmkb.nl/', role='button') mijnmkb.nl
+
+        div.item.active
+          img(src='holder.js/900x500/auto/social', alt='Fifth Slide')
+          div.container
+            div.carousel-caption
+              h1 Sturen op cijfers
+              p Heb jij je administratie echt op orde en stuur jij je bedrijf hiermee? Krijg inzicht in je cijfers en bepaal je koers!
+              p
+                a.btn.btn-lg.btn-primary(href='http://scan.mkbservicedesk.nl/sturenopcijfersscan?utm_source=mkbnederland&utm_medium=overall&utm_content=2013&utm_campaign=sturenopcijfers', role='button') Doe de test
+
+      a.carousel-control.left(href='#myCarousel', data-slide='prev')
+        span.glyphicon.glyphicon-chevron-left
+      a.carousel-control.right(href='#myCarousel', data-slide='next')
+        span.glyphicon.glyphicon-chevron-right
+
+    //- RSS.js
+    div#rsscontainer.container.rss
+      div#rssholder.row
+      hr.featurette-divider
+
+    //- Marketing
+    div.container.marketing
+      div.row
+        div.col-lg-4
+          img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
+          h2 Heading
+          p Donec sed odio dui. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Morbi leo risus, porta ac consectetur ac, vestibulum at eros. Praesent commodo cursus magna.
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+
+        div.col-lg-4
+          img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
+          h2 Heading
+          p Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+
+        div.col-lg-4
+          img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
+          h2 Heading
+          p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          p
+            a.btn.btn-default(href='#', role='button') View details &raquo;
+      hr.featurette-divider
+
+      include partials/footer.jade
+
+    include partials/afterimports.jade
+    script.
+      retrieveRSS();
