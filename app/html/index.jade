@@ -16,50 +16,21 @@ html(lang='en')
         li(data-target='#myCarousel', data-slide-to='4')
 
       div.carousel-inner
-        div.item
-          img(src='holder.js/900x500/auto/lava', alt='First Slide')
-          div.container
-            div.carousel-caption
-              h1 Week van de Ondernemer 2014
-              p Het grootste ondernemersevent van Nederland staat dit jaar in het teken van Groei. Tientallen topsprekers helpen u!
-              p
-                a.btn.btn-lg.btn-primary(href='http://www.weekvandeondernemer.nl/', role='button') Meer informatie
+        mixin carouselItem(classes, img, alt, title, description, link, button)
+          div(class=classes)
+            img(src=img, alt=alt)
+            div.container
+              div.carousel-caption
+                h1= title
+                p= description
+                p
+                  a.btn.btn-lg.btn-primary(href=link, role='button')= button
 
-        div.item
-          img(src='holder.js/900x500/auto/sky', alt='Second Slide')
-          div.container
-            div.carousel-caption
-              h1 Europese verkiezingen
-              p Kijk en vergelijk. Waar kiezen we (nu echt) voor bij de Europese verkiezingen van 22 mei
-              p
-                a.btn.btn-lg.btn-primary(href='http://www.mkb.nl/eu-verkiezingen', role='button') Verkiezingsnieuws
-
-        div.item
-          img(src='holder.js/900x500/auto/industrial', alt='Third Slide')
-          div.container
-            div.carousel-caption
-              h1 Hulpknop Stop Cybercrime
-              p Met één druk op de knop hulp, advies en doorverwijzing voor ondernemers die slachtoffer zijn van cybercrime.
-              p
-                a.btn.btn-lg.btn-primary(href='http://hulpknop.stopcybercrime.nu/', role='button') Extra hulp
-
-        div.item
-          img(src='holder.js/900x500/auto/vine', alt='Fourth Slide')
-          div.container
-            div.carousel-caption
-              h1 MijnMKB
-              p MKB-Nederland helpt jou om je doelen te bereiken. Maak daarom een persoonlijk profiel aan op www.mijnmkb.nl
-              p
-                a.btn.btn-lg.btn-primary(href='http://www.mijnmkb.nl/', role='button') mijnmkb.nl
-
-        div.item.active
-          img(src='holder.js/900x500/auto/social', alt='Fifth Slide')
-          div.container
-            div.carousel-caption
-              h1 Sturen op cijfers
-              p Heb jij je administratie echt op orde en stuur jij je bedrijf hiermee? Krijg inzicht in je cijfers en bepaal je koers!
-              p
-                a.btn.btn-lg.btn-primary(href='http://scan.mkbservicedesk.nl/sturenopcijfersscan?utm_source=mkbnederland&utm_medium=overall&utm_content=2013&utm_campaign=sturenopcijfers', role='button') Doe de test
+        +carouselItem(['item', 'active'], 'holder.js/900x500/auto/lava',       'First Slide',  'Week van de Ondernemer 2014', 'Het grootste ondernemersevent van Nederland staat dit jaar in het teken van Groei. Tientallen topsprekers helpen u!', 'http://www.weekvandeondernemer.nl/', 'Meer informatie')
+        +carouselItem(['item']          , 'holder.js/900x500/auto/sky',        'Second Slide', 'Europese verkiezingen', 'Kijk en vergelijk. Waar kiezen we (nu echt) voor bij de Europese verkiezingen van 22 mei', 'http://www.mkb.nl/eu-verkiezingen', 'Verkiezingsnieuws')
+        +carouselItem(['item']          , 'holder.js/900x500/auto/industrial', 'Third Slide',  'Hulpknop Stop Cybercrime', 'Met één druk op de knop hulp, advies en doorverwijzing voor ondernemers die slachtoffer zijn van cybercrime.', 'http://hulpknop.stopcybercrime.nu/', 'Extra hulp')
+        +carouselItem(['item']          , 'holder.js/900x500/auto/vine',       'Fourth Slide', 'MijnMKB', 'MKB-Nederland helpt jou om je doelen te bereiken. Maak daarom een persoonlijk profiel aan op www.mijnmkb.nl', 'http://www.mijnmkb.nl/', 'mijnmkb.nl')
+        +carouselItem(['item']          , 'holder.js/900x500/auto/social',     'Fifth Slide',  'Sturen op cijfers', 'Heb jij je administratie echt op orde en stuur jij je bedrijf hiermee? Krijg inzicht in je cijfers en bepaal je koers!', 'http://scan.mkbservicedesk.nl/sturenopcijfersscan?utm_source=mkbnederland&utm_medium=overall&utm_content=2013&utm_campaign=sturenopcijfers', 'Doe de test')
 
       a.carousel-control.left(href='#myCarousel', data-slide='prev')
         span.glyphicon.glyphicon-chevron-left
