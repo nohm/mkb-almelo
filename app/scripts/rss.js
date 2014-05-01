@@ -75,8 +75,8 @@ var parseRSS = function (rawRSS) {
                   '<h2>' +
                     '<a href="' + link + '">' + title + '</a>' +
                   '</h2>' +
-                  '<i class="fa fa-twitter tweet" onclick="tweet(\'' + link + '\',\'' + TWITTER_MKB + '\',\'' + index + '\')"></i>' +
-                  '<i class="fa fa-facebook share" onclick="facebook(\'' + link + '\',\'' + index + '\',\'\')"></i>' +
+                  '<i class="fa fa-twitter tweet" onclick="tweet(' + index + ')"></i>' +
+                  '<i class="fa fa-facebook share" onclick="facebook(' + index + ')"></i>' +
                   '<p>' + description + '</p>' +
                 '</div>'
             );

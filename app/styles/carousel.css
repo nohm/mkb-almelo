@@ -45,7 +45,7 @@ footer {
 .navbar-brand {
   height: 67px;
   width: 134px;
-  background: url('../images/logo_mkb.png') no-repeat scroll left center / 134px transparent;
+  background: url('../img/logo_mkb.png') no-repeat scroll left center / 134px transparent;
 }
 
 .navbar-toggle .icon-bar {
