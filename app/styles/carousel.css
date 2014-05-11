@@ -15,13 +15,16 @@ body {
 }
 
 footer {
+  margin-top: -60px;
+}
+
+.center {
   text-align: center;
 }
 
-.social-footer a{
-  padding: 15px;
+.fa-7x {
+  font-size: 7em;
 }
-
 
 /* CUSTOMIZE THE NAVBAR
 -------------------------------------------------- */
@@ -45,7 +48,7 @@ footer {
 .navbar-brand {
   height: 67px;
   width: 134px;
-  background: url('../img/logo_mkb.png') no-repeat scroll left center / 134px transparent;
+  background: url('../img/logo_mkb_new.png') no-repeat scroll left center / 134px transparent;
 }
 
 .navbar-toggle .icon-bar {
@@ -118,7 +121,9 @@ footer {
   margin-right: 10px;
   margin-left: 10px;
 }
-
+.marketing .fa {
+  color: #ff5a00;
+}
 
 /* Featurettes
 ------------------------- */
