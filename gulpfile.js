@@ -13,7 +13,7 @@ var gulp = require('gulp'),
     jadeconfig = require('./jade_config.js');
 
 var paths = {
-  jade: ['./jade_config.js'],
+  jade: ['jade_config.js'],
   html: ['app/html/**/*.jade'],
   scripts: {
     coffee: ['app/scripts/**/*.coffee'],

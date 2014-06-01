@@ -9,15 +9,15 @@ html(lang='en')
     //- Carousel
     div#myCarousel.carousel.slide(data-ride='carousel')
       ol.carousel-indicators
-        li.active(data-target='#myCarousel', data-slide-to='0')
-        li(data-target='#myCarousel', data-slide-to='1')
-        li(data-target='#myCarousel', data-slide-to='2')
-        li(data-target='#myCarousel', data-slide-to='3')
-        li(data-target='#myCarousel', data-slide-to='4')
+        mixin carouselTarget(classes, number)
+          li(class=classes, data-target='#myCarousel', data-slide-to=number)
 
+        each val, key in locals.carousel
+          +carouselTarget(val[0], key)
+          
       div.carousel-inner
         mixin carouselItem(classes, img, alt, title, description, link, button)
-          div(class=classes)
+          div(class=['item', classes])
             img(src=img, alt=alt)
             div.container
               div.carousel-caption
@@ -37,23 +37,29 @@ html(lang='en')
     //- Marketing
     div.container.marketing
       div.row
-        div.col-lg-4
+        div.col-lg-3
           //- img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
           i.fa.fa-7x.fa-comment
-          h2 Kennis
-          p Door optimaal te kunnen profiteren van MKB Nederland en onze contacten binnen de gemeente Almelo en de landelijke politiek zijn wij een kenniscentrum voor vele vragen. 
+          h2 Informeert
+          p Leden van MKB-Almelo ontvangen regelmatig de nieuwsbrief met de meest actuele informatie.
 
-        div.col-lg-4
+        div.col-lg-3
           //- img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
           i.fa.fa-7x.fa-users
-          h2 Contacten
-          p Door bezoeken te realiseren bij collega-ondernemers creëren wij ruimte voor innovatie, begrip en kennis.
+          h2 Ontmoet
+          p MKB-Almelo is een belangrijke partij die de faciliteiten biedt om ondernemers te ontmoeten. Ook het ontmoeten van vertegenwoordigers van overheden en onderwijsinstellingen draagt bij aan een sterk netwerk.
 
-        div.col-lg-4
+        div.col-lg-3
           //- img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
-          i.fa.fa-7x.fa-question
-          h2 Heading
-          p Donec sed odio dui. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Vestibulum id ligula porta felis euismod semper. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.
+          i.fa.fa-7x.fa-share-alt
+          h2 Ondersteunt
+          p Door het brede netwerk en de kennis via het partnerschap met MKB-Nederland kunnen ondernemers een beroep doen op MKB-Almelo voor het oplossen van collectieve problemen.
+          
+        div.col-lg-3
+          //- img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
+          i.fa.fa-7x.fa-flag-checkered
+          h2 Bereikt
+          p Leden van MKB-Almelo moeten kunnen ondernemen in een mkb-vriendelijk klimaat. Zonder onnodige regelgeving, te hoge lasten of een mkb-onvriendelijk aanbestedingsbeleid, maar met optimale communicatie tussen het bedrijfsleven en de gemeente.
 
         h4.center Meer weten? Neem contact met ons op!
       hr.featurette-divider
