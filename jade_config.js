@@ -11,10 +11,8 @@ module.exports = function() {
       'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 4' : '#'
     },
     'carousel' : [
-      [['active'] , 'holder.js/900x500/auto/lava',       'First Slide',  'Week van de Ondernemer 2014', 'Het grootste ondernemersevent van Nederland staat dit jaar in het teken van Groei. Tientallen topsprekers helpen u!', 'http://www.weekvandeondernemer.nl/', 'Meer informatie'],
-      [[]         , 'holder.js/900x500/auto/industrial', 'Second Slide',  'Hulpknop Stop Cybercrime', 'Met één druk op de knop hulp, advies en doorverwijzing voor ondernemers die slachtoffer zijn van cybercrime.', 'http://hulpknop.stopcybercrime.nu/', 'Extra hulp'],
-      [[]         , 'holder.js/900x500/auto/vine',       'Third Slide', 'MijnMKB', 'MKB-Nederland helpt jou om je doelen te bereiken. Maak daarom een persoonlijk profiel aan op www.mijnmkb.nl', 'http://www.mijnmkb.nl/', 'mijnmkb.nl'],
-      [[]         , 'holder.js/900x500/auto/social',     'Fourth Slide',  'Sturen op cijfers', 'Heb jij je administratie echt op orde en stuur jij je bedrijf hiermee? Krijg inzicht in je cijfers en bepaal je koers!', 'http://scan.mkbservicedesk.nl/sturenopcijfersscan?utm_source=mkbnederland&utm_medium=overall&utm_content=2013&utm_campaign=sturenopcijfers', 'Doe de test']
+      [['active'] , 'assets/img/slide_logo.png', 'First Slide',  'Stichting MKB Almelo 3.0', 'Er is een nieuw logo en er waait een frisse wind door de stichting. Meer contact met u als ondernemer, meer contact richting de overheid.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[]         , 'assets/img/kerstboom.jpg', 'Second Slide',  'Kerstboomverlichting', 'De Kerstboom in de vijver bij Kreta heeft jaren blauwe lichtjes mogen dragen. De stichting MKB Almelo zal nieuwe lichtjes in warm-wit aanbieden aan Almelo en haar inwoners. Kijk regelmatig op deze site voor de laatste info betreffende dit aanbieden.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
     ]
   }
 };
