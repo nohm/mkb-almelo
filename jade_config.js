@@ -12,7 +12,7 @@ module.exports = function() {
     },
     'carousel' : [
       [['active'] , 'assets/img/slide_logo.png', 'First Slide',  'Stichting MKB Almelo 3.0', 'Er is een nieuw logo en er waait een frisse wind door de stichting. Meer contact met u als ondernemer, meer contact richting de overheid.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
-      [[]         , 'assets/img/kerstboom.jpg', 'Second Slide',  'Kerstboomverlichting', 'De Kerstboom in de vijver bij Kreta heeft jaren blauwe lichtjes mogen dragen. De stichting MKB Almelo zal nieuwe lichtjes in warm-wit aanbieden aan Almelo en haar inwoners. Kijk regelmatig op deze site voor de laatste info betreffende dit aanbieden.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
+      [[]         , 'assets/img/kerstboom.jpg', 'Second Slide',  'Kerstboom', 'Er staat iets te gebeuren met de kerstboom in de vijver bij Kreta, maar wat? Hou deze site in de gaten voor meer informatie.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
     ]
   }
 };
