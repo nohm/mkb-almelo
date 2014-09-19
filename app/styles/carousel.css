@@ -76,9 +76,14 @@ footer {
   background-color: #777;
   min-width: 100%;
 }
+
 .carousel-inner > .item > img {
   margin: 0 auto;
   height: 500px;
+}
+
+.dark .carousel-caption {
+  color: #232323 !important;
 }
 
 

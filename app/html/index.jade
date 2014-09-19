@@ -14,7 +14,7 @@ html(lang='en')
 
         each val, key in locals.carousel
           +carouselTarget(val[0], key)
-          
+
       div.carousel-inner
         mixin carouselItem(classes, img, alt, title, description, link, button)
           div(class=['item', classes])
@@ -54,7 +54,7 @@ html(lang='en')
           i.fa.fa-7x.fa-share-alt
           h2 Ondersteunt
           p Door het brede netwerk en de kennis via het partnerschap met MKB-Nederland kunnen ondernemers een beroep doen op MKB-Almelo voor het oplossen van collectieve problemen.
-          
+
         div.col-lg-3
           //- img.img-circle(data-src='holder.js/140x140', alt='Placeholder')
           i.fa.fa-7x.fa-flag-checkered

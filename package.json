@@ -1,11 +1,12 @@
 {
   "name": "gulp-lean-asset-pipeline",
+  "repository": "",
   "version": "0.0.1",
   "dependencies": {},
   "devDependencies": {
     "gulp": "~3.5.0",
     "gulp-changed": "^0.3.0",
-    "gulp-clean": "~0.2.4",
+    "gulp-rimraf": "^0.1.0",
     "gulp-coffee": "~1.4",
     "gulp-concat": "~2.2.0",
     "gulp-imagemin": "~0.1.4",

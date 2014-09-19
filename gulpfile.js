@@ -4,7 +4,7 @@ var gulp = require('gulp'),
     jshint = require('gulp-jshint'),
     concat = require('gulp-concat'),
     uglify = require('gulp-uglify'),
-    clean = require('gulp-clean'),
+    rimraf = require('gulp-rimraf'),
     sass = require('gulp-sass'),
     minifyCSS = require('gulp-minify-css'),
     changed = require('gulp-changed'),
@@ -72,7 +72,7 @@ gulp.task('images', function() {
 
 // Clean up the dist folder
 gulp.task('clean', function () {
-  return gulp.src(['dist/assets/js', 'dist/assets/css', 'dist/assets/img'], { read: false }).pipe(clean());
+  return gulp.src(['dist/assets/js', 'dist/assets/css', 'dist/assets/img'], { read: false }).pipe(rimraf());
 });
 
 // Rerun the task when a file changes
