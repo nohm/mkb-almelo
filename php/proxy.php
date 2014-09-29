@@ -1,12 +1,15 @@
 <?php
-  header('Content-type: application/xml');
+  $type = 'Content-type: application/';
+  $type .= (isset($_GET['type']) ? $_GET['type'] : 'xml');
+  header($type);
   $url = (isset($_GET['url']) ? $_GET['url'] : null);
   $pointer = fopen($url, 'r');
+  $ret = '';
   if ($pointer) {
     while (!feof($pointer)) {
-      $line = fgets($pointer);
-      echo $line;
+      $ret .= fgets($pointer);
     }
     fclose($pointer);
   }
+  echo $ret;
 ?>

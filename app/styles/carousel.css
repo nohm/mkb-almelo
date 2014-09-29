@@ -128,6 +128,16 @@ footer {
   color: #ff5a00;
 }
 
+
+/* RSS CONTENT
+-------------------------------------------------- */
+
+#rsscontainer_wo h2 {
+  font-size: 16px;
+  margin: 5px 0;
+}
+
+
 /* Featurettes
 ------------------------- */
 

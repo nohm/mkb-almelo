@@ -65,12 +65,17 @@ html(lang='en')
       hr.featurette-divider
 
     //- RSS.js
-    div#rsscontainer.container.rss
-      div#rssholder.row
+    div#rsscontainer_mkb.container.rss
+      div#rssholder_mkb.row
+      hr.featurette-divider
+
+    div#rsscontainer_wo.container.rss
+      div#rssholder_wo.row
       hr.featurette-divider
 
       include partials/footer.jade
 
     include partials/afterimports.jade
     script.
-      retrieveRSS();
+      mkbRSS(config.mkb);
+      woRSS(config.wo);
