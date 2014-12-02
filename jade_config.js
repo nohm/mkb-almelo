@@ -11,7 +11,7 @@ module.exports = function() {
       'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 4' : '#'
     },
     'carousel' : [
-      [['active', 'dark'] , 'assets/img/slide_logo.png', 'First Slide',  'Stichting MKB Almelo 3.0', 'Er is een nieuw logo en er waait een frisse wind door de stichting. Meer contact met u als ondernemer, meer contact richting de overheid.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [['active', 'dark'] , 'assets/img/slide_logo.png', 'First Slide',  'Uitnodiging werkgeverslunch 15 december 2014', 'Zorg dat u op de hoogte bent van alle zaken omtrent personeelsbeleid. Kom naar de vier werkgeverslunches van Werkplein Twente & MKB en laat u door onze sprekers informeren, inspireren en adviseren over de beste manier om uw personeelsbeleid klaar te maken voor de toekomst.', 'http://www.werkpleintwente.nl/werkgeverslunch-maandag-15-december', 'Aanmelden'],
       [[]         , 'assets/img/kerstboom.jpg', 'Second Slide',  'Kerstboom', 'Er staat iets te gebeuren met de kerstboom in de vijver bij Kreta, maar wat? Hou deze site in de gaten voor meer informatie.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
     ]
   }
