@@ -11,9 +11,7 @@ module.exports = function() {
       'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 4' : '#'
     },
     'carousel' : [
-      [['active'], 'assets/img/witte_lichtjes.jpg', 'First Slide',  'Witte Lichtjes', 'Vandaag heeft Wim van der Elst namens MKB Almelo de nieuwe lichtjes voor de kerstboom in de hofvijver aangeboden aan wethouder Jan van Marle. Ze zijn in dank aanvaard.', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
-      [[], 'assets/img/feestdagen.jpg', 'Second Slide', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
-      [[], 'assets/img/vergadertafel.jpg', 'Third Slide',  'Uitnodiging werkgeverslunch 15 december 2014', 'Zorg dat u op de hoogte bent van alle zaken omtrent personeelsbeleid. Kom naar de vier werkgeverslunches van Werkplein Twente & MKB en laat u door onze sprekers informeren, inspireren en adviseren over de beste manier om uw personeelsbeleid klaar te maken voor de toekomst.', 'http://www.werkpleintwente.nl/werkgeverslunch-maandag-15-december', 'Aanmelden']
+      [['active'], 'assets/img/feestdagen.jpg', 'Second Slide', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
     ]
   }
 };
