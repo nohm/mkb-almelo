@@ -11,7 +11,12 @@ module.exports = function() {
       'Nieuwsbrief MKB Almelo - Jaargang 1 uitgave 4' : '#'
     },
     'carousel' : [
-      [['active'], 'assets/img/feestdagen.jpg', 'Second Slide', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
+      [['active'], 'assets/img/stadhuis.jpg', 'Stadhuis', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[], 'assets/img/bedrijventerrein.jpg', 'Bedrijventerrein', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[], 'assets/img/bolk.jpg', 'Bolk', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[], 'assets/img/bolletje.jpg', 'Bolletje', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[], 'assets/img/heracles.jpg', 'Heracles', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl'],
+      [[], 'assets/img/station.jpg', 'Station', '', '', 'http://mkbalmelo.nl/', 'mkbalmelo.nl']
     ]
   }
 };
