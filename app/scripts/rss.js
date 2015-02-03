@@ -79,8 +79,6 @@ function mkbRSS(conf) {
   }
 }
 
-var global;
-
 function woRSS(conf) {
   // Get filled by the rssreader for the share buttons
   var social = {
@@ -95,14 +93,10 @@ function woRSS(conf) {
     data = data.replace(/<img\b[^>]*\/>/ig,''); // remove links
     data = $(data); // parse it to elements
 
-    var list = data.find('.midCol').find('ul').filter(function() {
-      return this.id.match(/(spotlight_).*/);
-    });
-
-    list.find('li').each(function(index, item) {
+    data.find('.nieuwsoverzicht-artikelkop').each(function(index, item) {
       var itemData = $(item).find('a')[0];
       var link = conf.base_url + itemData.href.replace(/^.*\/\/[^\/]+/, '');
-      var description = itemData.innerHTML.split('</span> ')[1].split('<span ')[0];
+      var description = itemData.innerHTML;
 
       social.urls.push(link);
       social.descriptions.push(description);
